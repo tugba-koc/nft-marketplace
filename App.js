@@ -11,9 +11,9 @@ const theme = {
   ...DefaultTheme,
   colors: {
     ...DefaultTheme.colors,
-    background: 'transparent'
-  }
-}
+    background: 'transparent',
+  },
+};
 
 const App = () => {
   const [loaded] = useFonts({
@@ -21,8 +21,8 @@ const App = () => {
     InterLight: require('./assets/fonts/Inter-Light.ttf'),
     InterMedium: require('./assets/fonts/Inter-Medium.ttf'),
     InterRegular: require('./assets/fonts/Inter-Regular.ttf'),
-    InterSemiBold: require('./assets/fonts/Inter-SemiBold.ttf')
-  })
+    InterSemiBold: require('./assets/fonts/Inter-SemiBold.ttf'),
+  });
 
   // if(!loaded) return null;
 
@@ -30,12 +30,11 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator initialRouteName='Home'>
         <Stack.Screen
-          name="Home"
+          name='Home'
           component={Home}
           options={{ headerShown: false }}
         />
-        <Stack.Screen name="Details" component={Details} />
-        {/* <Stack.Screen name="Settings" component={Settings} /> */}
+        <Stack.Screen name='Details' component={Details} />
       </Stack.Navigator>
     </NavigationContainer>
   );
